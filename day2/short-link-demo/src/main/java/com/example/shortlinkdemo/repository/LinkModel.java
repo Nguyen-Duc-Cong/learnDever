@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Table(name="TB_LINK_NEW")
 //@Table(name="TB_LINK_NEW", schema = "shortenlinkapi")
 //@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class LinkModel implements Serializable{
+	public class LinkModel implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	

@@ -39,17 +39,6 @@ public class UrlShorterRestController {
         return new ResponseEntity<Object>(shortenUrl, HttpStatus.OK);
     }
 
-    //    @RequestMapping(value="/link", method=RequestMethod.POST)
-//    public LinkModel saveLink(@RequestBody String realLink) {
-//        String randomChar = getRandomChars();
-//        LinkModel linkModel = new LinkModel();
-////        if (linkModel.getRealLink(realLink) != null)
-////            return;
-//        linkModel.setRealLink(realLink);
-//        setShortUrl(randomChar, linkModel);
-//        return linkRepositoty.save(linkModel);
-//    }
-
     @RequestMapping(value = "/s/{randomstring}", method = RequestMethod.GET)
     public void getFullUrl(HttpServletResponse response, @PathVariable("randomstring") String randomString) throws IOException {
 
@@ -71,9 +60,6 @@ public class UrlShorterRestController {
         linkRepositoty.save(linkModel);
     }
 
-//    private void setShortUrl(String randomChar, LinkModel linkModel) throws MalformedURLException {
-//        linkModel.setShortLink("http://localhost:8080/s/"+randomChar);
-//    }
 
     private String getRandomChars() {
         String randomStr = "";
